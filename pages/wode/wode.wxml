@@ -1,0 +1,97 @@
+<view class="container">
+  <view class="search">
+    <view class="search-group">
+      <image class="search-image" src="../../assets/images/search.png"></image>
+      <input class="search-input" placeholder-class="search-input-holder" bindconfirm="searchName" confirm-type="搜索" maxlength="2" placeholder="搜索" />
+    </view>
+  </view>
+  <view class="header">
+    <view class="header-top">
+      <view class="header-top-header">
+        <image bindtap="onChange" class="header-top-header-userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      </view>
+      <view class="header-top-center">
+        <image animation="{{animationData}}" bindtap="randOneName" class="header-center-question" src="../../assets/images/touzi.png"></image>
+        <text catchtap="onChangeName" class="header-center-name">{{userInfo.firstName}}{{userInfo.nickName}}</text>
+        <view class="header-center-line-group">
+          <image animation="{{animationLineData}}" bindtap="randOneName" class="header-center-banyuan" src="../../assets/images/banyuan.png"></image>
+          <view class="header-center-line"></view>
+        </view>
+      </view>
+    </view>
+    <view class="header-bottom">
+      <view class="header-bottom-srcData">
+        <canvas class="myCanvas" canvas-id="myCanvas" />
+        <view class="header-bottom-from-detail">
+          <text class="header-bottom-from-detail-left"></text>
+          <text class="header-bottom-from-detail-right">《{{srcData.from_name}}》</text>
+        </view>
+        <view class="header-bottom-from-detail-line"></view>
+      </view>
+      <view class="header-bottom-header">
+        <view wx:if="{{hideScore}}">
+          <image animation="{{animationData}}" bindtap="hindScore" class="header-hideScore" src="../../assets/images/eyeclose.png"></image>
+        </view>
+        <view wx:else>
+          <image animation="{{animationData}}" bindtap="hindScore" class="header-hideScore" src="../../assets/images/eyeopen.png"></image>
+        </view>
+
+
+        <view class="header-bottom-header-score-group" hidden="{{hideScore}}">
+
+          <text class="header-bottom-header-score-text">姓名得分</text>
+          <text class="header-bottom-header-score">{{scoreData.zf}}分</text>
+          <view class="header-bottom-3c5g">
+            <view class="header-bottom-3c5g-3c">
+              <text>(三才) 天才: {{scoreData.tc}} 人才: {{scoreData.rc}} 地才: {{scoreData.dc}}</text>
+            </view>
+            <view class="header-bottom-3c5g-5g">
+              <text>(五格) 天格: {{scoreData.tg}} 人格: {{scoreData.rg}} 地格: {{scoreData.dg}} 外格: {{scoreData.wg}} 总格: {{scoreData.zg}}</text>
+            </view>
+          </view>
+        </view>
+
+        <!--<text class="header-bottom-header-exp"></text>-->
+      </view>
+
+      <!--<view class="header-bottom-header-line"></view>-->
+      <view class="header-bottom-from">
+        <block wx:if="{{srcData.stored == 0}}">
+          <view class="header-bottom-header-store" catchtap="addStore">
+            <text>收 藏</text>
+          </view>
+        </block>
+        <block wx:else>
+          <view class="header-bottom-header-stored">
+            <text>已 收 藏</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class="center">
+  </view>
+  <view class="footer">
+    <view class="footer-store" catchtap="onGetStore">
+      <view class="footer-store-left">
+        <image class="footer-store-left-image" src="../../assets/images/shoucang.png"></image>
+      </view>
+      <view class="footer-store-center">
+        <text class="footer-store-center-title">收藏记录</text>
+        <text class="footer-store-center-content">{{storeData.title}}</text>
+        <view class="footer-store-center-time">
+          <image class="footer-store-center-time-image" src="../../assets/images/time_gray.png"></image>
+          <text class="footer-store-center-time-text">{{storeData.time}}</text>
+        </view>
+      </view>
+      <view class="footer-store-line"></view>
+      <view class="footer-store-right">
+        <image class="footer-store-right-image" src="../../assets/images/heart.png"></image>
+        <text class="footer-store-right-text">{{storeData.size}}</text>
+      </view>
+    </view>
+
+    <text selectable="true" class="copyright">\n\n©版权所有者 微信号: heiscuiwang\n\n</text>
+
+  </view>
+</view>

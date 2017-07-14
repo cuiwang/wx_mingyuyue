@@ -1,0 +1,40 @@
+<view class="container">
+  <view id="content">
+
+    <!--列表页面-->
+    <scroll-view style="height: {{scrollHeight}}px;" scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower">
+      <!--<scroll-view style="height: 100%;" scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower">-->
+
+      <view wx:for="{{list}}" wx:key="id" wx:for-index="idx" wx:for-item="item">
+        <!--列表开始-->
+          <navigator url="../../pages/name/name?title={{item.name}}&id={{item.id}}" hover-class="none">
+            <view class="list_card">
+              <view class="list_card_left">
+                <text class="list_card_left_title">《{{item.by}} {{item.name}} 》</text>
+               <view class="list_card_left_sub">
+                 <image class="list_card_left_sub_image" src="../../assets/images/head.png"></image>
+                  <text class="list_card_left_subtitle">
+                 {{item.author}}  {{item.time}}</text>
+                  <image class="list_card_left_sub_image" src="../../assets/images/time_gray.png"></image>
+                <text class="list_card_left_subtitle">
+                {{item.created_at}}</text>
+               </view>
+               
+
+              </view>
+              <view class="list_card_right">
+                <text class="list_card_right_num">{{item.size}}个</text>
+                <image class="list_card_right_image" src="../../assets/images/more.png"></image>
+
+              </view>
+
+            </view>
+
+          </navigator>
+
+        <!--列表end-->
+      </view>
+
+    </scroll-view>
+  </view>
+</view>

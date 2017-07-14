@@ -1,0 +1,52 @@
+<view class="container">
+  <view id="content">
+
+    <!--列表页面-->
+    <scroll-view style="height: {{scrollHeight}}px;" scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower">
+      <!--<scroll-view style="height: 100%;" scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower">-->
+
+      <!--头部滚动视图-->
+      <swiper indicator-dots="true" autoplay="true">
+        <block wx:for="{{imgUrls}}" wx:key="url">
+          <swiper-item>
+            <image src="{{item.url}}" mode="aspectFill" class="slide-image" width="355" height="150" />
+          </swiper-item>
+        </block>
+      </swiper>
+
+<view wx:for="{{list}}" wx:key="id" wx:for-index="idx" wx:for-item="item">
+      <!--列表开始-->
+       <navigator url="../../pages/mingku_details/mingku_details?title={{item.from}}" hover-class="none">
+      <view class="thelist">
+        <!--时间-->
+        <text class="thelist_time">{{item.updated_at}}</text>
+        <view class="list_card">
+          <!--标题-->
+          <text class="thelist_title">《 {{item.from}} 》</text>
+          <!--副标题-->
+          <view class="thelist_subtitle">
+            <image class="thelist_subtitle_img" src="../../assets/images/book.png"></image>
+            <text class="thelist_num">{{item.custom}}篇</text>
+            <image class="thelist_subtitle_img" src="../../assets/images/all.png"></image>
+            <text class="thelist_num">{{item.size}}字</text>
+          </view>
+         <!--封面-->
+          <image class="thelist_image" mode="aspectFill" src="{{item.imageurl}}"></image>
+          <!--描述-->
+          <text class="thelist_description">{{item.description}}</text>
+          <!--分割线-->
+          <text class="thelist_splitline"></text>
+          <!--查看详情--> 
+          <view class="thelist_next">
+            <text class="thelist_next_left">查看详情</text>
+            <image class="thelist_next_right" src="../../assets/images/more.png"></image>
+          </view>
+        </view>
+      </view>
+       </navigator>
+      <!--列表end-->
+       </view>
+
+    </scroll-view>
+  </view>
+</view>

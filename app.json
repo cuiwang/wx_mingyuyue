@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/wode/wode",
+    "pages/mingku/mingku",
+    "pages/mingku_details/mingku_details",
+    "pages/name/name",
+    "pages/login/login",
+    "pages/change/change",
+    "pages/store/store",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2c3e50",
+    "navigationBarTitleText": "名余曰",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#ffffff",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#d9cccb",
+    "selectedColor": "#2c3e50",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/mingku/mingku",
+        "text": "名库",
+        "iconPath": "assets/images/ciku_icon.png",
+        "selectedIconPath": "assets/images/ciku_s_icon.png"
+      },
+      {
+        "pagePath": "pages/wode/wode",
+        "text": "我的",
+        "iconPath": "assets/images/my_icon.png",
+        "selectedIconPath": "assets/images/my_s_icon.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

@@ -1,0 +1,63 @@
+<view class="popwindow" animation="{{animationData}}">
+  <view class="popwindow_header">
+    <canvas class="myCanvas" canvas-id="myCanvas" />
+
+    <!--<text class="popwindow_header_title">{{info}}</text>-->
+  </view>
+   <block wx:if="{{loading_dict}}">
+      <view class="loading_dict"> 正在加载康熙词典... </view>
+    </block>
+  <view class="popwindow_center">
+   
+    <!--字典内容-->
+    <view class="dictionary">
+      <block wx:for="{{dictionarys}}" wx:for-index="idx" wx:for-item="item">
+        <view class="dictionary_item">
+          <block wx:if="{{item.fanti}}">
+            <text class="dictionary_item_name">{{item.name}} ({{item.fanti}})</text>
+          </block>
+          <block wx:else>
+            <text class="dictionary_item_name">{{item.name}}</text>
+          </block>
+          <text class="dictionary_item_wuxin">{{item.wuxin}}</text>
+          <text class="dictionary_item_pinyin">{{item.pinyin}} - {{item.bushou}}</text>
+
+          <!--<text class="dictionary_item_fanti"> {{item.fanti}}</text>-->
+          <text class="dictionary_item_bihua">{{item.bihua}}</text>
+        </view>
+        <block wx:if="{{idx == 0}}">
+          <view class="dictionary_split"> </view>
+        </block>
+      </block>
+    </view>
+  </view>
+  <view class="popwindow_footer">
+    <view class="popwindow_footer_cancle" catchtap="pop_cancel">
+      <text>取 消</text>
+    </view>
+    <view class="popwindow_footer_split"></view>
+    <view class="popwindow_footer_sure" catchtap="pop_sure">
+      <text>收 藏</text>
+    </view>
+  </view>
+</view>
+<view class="container">
+  <view class="content">
+    <scroll-view class="scrollview" style="height: {{scrollHeight}}px;" scroll-y="true" bindscrolltolower="loadMore" bindscrolltoupper="refesh" bindscroll="scroll">
+      <view wx:if="{{hasRefesh}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+        <icon type="waiting" size="45" />
+        <text>刷新中...</text>
+      </view>
+      <view wx:else style="display:none">
+        <text></text>
+      </view>
+      <view class="section ">
+          <block wx:for="{{list}}" wx:key="ids" wx:for-index="sidx" wx:for-item="sitem">
+            <text id="{{sitem.id}}" data-all="{{sitem}}" data-s="{{sitem.name}}" data-hi="{{sitem.description}}" catchtap="nameClick" class="flex-item">{{userInfo.firstName}}{{sitem.name}}</text>
+          </block>
+       
+      </view>
+    </scroll-view>
+  </view>
+  <view class="footer">底部位置</view>
+</view>

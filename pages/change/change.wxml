@@ -1,0 +1,9 @@
+<view class="container">
+ <view class="section">
+  <text class="userinfo-nickname">请输入尊贵的姓氏 (最多两个字)</text>
+  <input bindinput="bindinput" type="text" class="name_input" placeholder="{{userInfo.firstName}}" placeholder-style="font-size: 0.8em" focus="{{focus}}"/>
+  <view class="btn-area">
+    <button class="btn" type="primary" bindtap="bindButtonTap">完成</button>
+  </view>
+</view>
+</view>

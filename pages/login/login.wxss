@@ -1,0 +1,43 @@
+.container {
+  background-color: #faf7fe;
+  display: flex;
+  
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #999;
+  font-size: 0.8em;
+  margin: 30rpx;
+}
+
+.section {
+  display: flex;
+  background-color: #faf7fe;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.name_input {
+  background-color: #fff;
+  width: 90%;
+  padding: 30rpx;
+}
+.btn-area {
+     width:90%;
+    margin: 50rpx;
+ 
+}

@@ -1,0 +1,258 @@
+.container {
+  display: flex;
+  flex-direction: column;
+   width:100%;
+    height:100%;
+    background: #f5f5f5;
+}
+.container swiper {
+  height: 30vh;
+  /*padding-bottom: 2rpx;*/
+   /*box-shadow:0 0 2rpx rgba(0, 0, 0, .5);  */
+}
+
+/*列表 thelist*/
+.thelist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.thelist_time {
+  color: white;
+  font-size: 0.6em;
+  padding: 10rpx;
+  margin: 30rpx;
+  background: #ddd;
+  text-align: center;
+  border-radius: 10rpx;
+  align-self: center;
+}
+.list_card {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-bottom: 10rpx;
+  background: white;
+  padding: 20rpx;
+   border-radius: 10rpx;
+   box-shadow:0 0 2rpx rgba(0, 0, 0, .5);  
+}
+
+
+.thelist_title {
+  color: black;
+  align-self: center;
+  font-size: 1.0em;
+  margin-bottom: 20rpx;
+}
+
+.thelist_subtitle {
+  display: flex;
+  flex-direction: row;
+  line-height: 32rpx;
+   margin-bottom: 30rpx;
+}
+.thelist_subtitle_img {
+   width: 32rpx;
+  height: 32rpx;
+   margin-right: 10rpx;
+  
+}
+.thelist_num {
+  color: #333;
+  font-size: 0.7em;
+  margin-right: 20rpx;
+}
+.thelist_image {
+  width: 100%;
+  height: 280rpx;
+   margin-bottom: 30rpx;
+}
+.thelist_description {
+  color: #999;
+  font-size: 0.6em;
+  line-height: 28rpx;
+  margin-bottom: 30rpx;
+
+}
+.thelist_splitline {
+  height: 1rpx;
+  background: #eee;
+  margin-bottom: 30rpx;
+}
+.thelist_next {
+  display: flex;
+  flex-direction: row;
+}
+.thelist_next_left {
+  font-size: 0.7em;
+  color: black;
+  flex: 1;
+}
+.thelist_next_right {
+  width: 32rpx;
+  height: 32rpx;
+  align-self: flex-end;
+}
+
+
+/**/
+.content {
+  flex:1 1 0
+}
+
+.nomore {
+  background-color: #eee;
+ text-align: center;
+  color: #28383f;
+  font-size: 0.9em;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+.mingku_list {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mingku_list_item {
+  display: flex;
+  flex-direction: column;
+  background-color: #eee;
+  flex: 1;
+}
+
+/*top*/
+
+.mingku_list_item_top {
+  display: flex;
+  align-items: center;
+  color: #28383f;
+  font-size: 0.9em;
+  padding: 20rpx;
+  background-color: #eee;
+}
+
+.mingku_list_item_top_image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+
+/*content*/
+
+.mingku_list_item_content {
+  display: flex;
+  flex-direction: column;
+  border: 1rpx solid #eee;
+  padding: 20rpx;
+  background-color: #fff;
+  margin-bottom: 5rpx;
+}
+
+.mingku_list_item_content_top {
+  display: flex;
+  align-items: center;
+}
+
+.mingku_list_item_content_top_image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.mingku_list_item_content_top_title {
+  flex: 1;
+  font-size: 0.8em;
+  color: #333;
+}
+
+.mingku_list_item_content_top_title_clicked {
+  flex: 1;
+  font-size: 0.8em;
+  color: #999;
+}
+
+.mingku_list_item_content_top_title_right {
+  font-size: 0.6em;
+  color: #999;
+  margin-right: 20rpx;
+}
+
+.mingku_list_item_content_top_title_by {
+  font-size: 0.6em;
+  color: #999;
+  margin-left: 5rpx;
+  margin-top: 20rpx;
+}
+
+.mingku_list_item_content_top_imagenew {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 10rpx;
+}
+
+.mingku_list_item_content_center {
+  margin-left: 10rpx;
+  margin-bottom: 10rpx;
+  margin-right: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mingku_list_item_content_center_description {
+  color: #333;
+  font-size: 0.7em;
+  letter-spacing: 3rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.mingku_list_item_content_bottom {
+  border-top: 1px solid #eee;
+  margin-top: 20rpx;
+  padding-top: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.mingku_list_item_content_bottom_authorimage {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+
+.mingku_list_item_content_bottom_numimage {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+
+.mingku_list_item_content_bottom_num {
+  color: #333;
+  flex: 1;
+  font-size: 0.7em;
+  margin-right: 20rpx;
+}
+
+.mingku_list_item_content_bottom_author {
+  color: #333;
+  font-size: 0.7em;
+  margin-right: 20rpx;
+}
+
+.mingku_list_item_content_bottom_view {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+
