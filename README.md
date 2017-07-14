@@ -3,10 +3,7 @@
 **后台程序请移步 [名余曰后台](https://github.com/cuiwang/mingyuyue)**
 
 ##### 任何问题欢迎加入QQ群交流: **287021519** 知无不言,言无不尽
-![](https://ws4.sinaimg.cn/large/006tKfTcgy1fhjh4qwhcoj30yi1pchdu.jpg)
-![](https://ws1.sinaimg.cn/large/006tKfTcgy1fhjh54nvp9j30yi1pcn1k.jpg)
-![](https://ws1.sinaimg.cn/large/006tKfTcgy1fhjh5bympnj30yi1pcte9.jpg)
-![](https://ws3.sinaimg.cn/large/006tKfTcgy1fhjh5jfruuj30yi1pcnpd.jpg)
+
 -------
 ## 程序说明
 1. 本程序使用的是微信web开发工具,下载后可以直接导入进去打开运行
@@ -20,5 +17,11 @@
 3. 摇一摇随机获取名字
 4. 查看古文中所有名字
 
+-------
+### 截图
+![](https://ws4.sinaimg.cn/large/006tKfTcgy1fhjh4qwhcoj30yi1pchdu.jpg)
+![](https://ws1.sinaimg.cn/large/006tKfTcgy1fhjh54nvp9j30yi1pcn1k.jpg)
+![](https://ws1.sinaimg.cn/large/006tKfTcgy1fhjh5bympnj30yi1pcte9.jpg)
+![](https://ws3.sinaimg.cn/large/006tKfTcgy1fhjh5jfruuj30yi1pcnpd.jpg)
 
 
